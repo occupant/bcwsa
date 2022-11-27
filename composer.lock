@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49dc5a8b1f4bbee8131582f06713884f",
+    "content-hash": "056f084cae4786e4574e5f4acef112f8",
     "packages": [
         {
             "name": "composer/installers",
@@ -461,6 +461,15 @@
                 "source": "https://github.com/consolidation/output-formatters/tree/3.5.1"
             },
             "time": "2020-10-11T04:15:32+00:00"
+        },
+        {
+            "name": "cure53/dompurify",
+            "version": "2.4.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/cure53/DOMPurify/archive/refs/tags/2.4.1.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "cweagans/composer-patches",
@@ -4064,6 +4073,33 @@
                 }
             ],
             "time": "2022-06-02T15:23:14+00:00"
+        },
+        {
+            "name": "jackmoore/colorbox",
+            "version": "1.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip"
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "jquery/jquery.imagesloaded",
+            "version": "v3.1.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/desandro/imagesloaded/archive/refs/tags/v3.1.8.zip"
+            },
+            "type": "drupal-library"
+        },
+        {
+            "name": "jquery/jquery.imgareaselect",
+            "version": "1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/odyniec/imgareaselect/archive/refs/tags/v1.0.0-rc.1.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "nikic/php-parser",

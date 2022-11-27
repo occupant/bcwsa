@@ -13,6 +13,54 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/7"
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "jackmoore/colorbox",
+              "version": "1.6",
+              "type": "drupal-library",
+              "dist": {
+                "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip",
+                "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "cure53/dompurify",
+              "version": "2.4.1",
+              "type": "drupal-library",
+              "dist": {
+                "url": "https://github.com/cure53/DOMPurify/archive/refs/tags/2.4.1.zip",
+                "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "jquery/jquery.imagesloaded",
+              "version": "v3.1.8",
+              "type": "drupal-library",
+              "dist": {
+                "url": "https://github.com/desandro/imagesloaded/archive/refs/tags/v3.1.8.zip",
+                "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "jquery/jquery.imgareaselect",
+              "version": "1.0",
+              "type": "drupal-library",
+              "dist": {
+                "url": "https://github.com/odyniec/imgareaselect/archive/refs/tags/v1.0.0-rc.1.zip",
+                "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -25,6 +73,7 @@
         "ext-xml": "*",
         "composer/installers": "^1.9",
         "composer/semver": "^1.4",
+        "cure53/dompurify": "^2.4",
         "cweagans/composer-patches": "^1.7",
         "drupal-composer/preserve-paths": "^0.1.6",
         "drupal/admin_menu": "^3.0@RC",
@@ -74,6 +123,9 @@
         "drupal/webform": "^4.24",
         "drupal/xmlsitemap": "^2.6",
         "drush/drush": "^8.0",
+        "jackmoore/colorbox": "^1.6",
+        "jquery/jquery.imagesloaded": "^3.1",
+        "jquery/jquery.imgareaselect": "^1.0",
         "symfony/filesystem": "~2.7 || ^3",
         "webflo/drupal-finder": "^1.2.1"
     },
