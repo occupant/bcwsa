@@ -29,11 +29,11 @@
         {
             "type": "package",
             "package": {
-              "name": "cure53/dompurify",
-              "version": "2.4.1",
+              "name": "twitter/twitter-api-php",
+              "version": "1.0.6",
               "type": "drupal-library",
               "dist": {
-                "url": "https://github.com/cure53/DOMPurify/archive/refs/tags/2.4.1.zip",
+                "url": "https://github.com/J7mbo/twitter-api-php/archive/refs/tags/1.0.6.zip",
                 "type": "zip"
                 }
             }
@@ -73,7 +73,6 @@
         "ext-xml": "*",
         "composer/installers": "^1.9",
         "composer/semver": "^1.4",
-        "cure53/dompurify": "^2.4",
         "cweagans/composer-patches": "^1.7",
         "drupal-composer/preserve-paths": "^0.1.6",
         "drupal/admin_menu": "^3.0@RC",
@@ -127,6 +126,7 @@
         "jquery/jquery.imagesloaded": "^3.1",
         "jquery/jquery.imgareaselect": "^1.0",
         "symfony/filesystem": "~2.7 || ^3",
+        "twitter/twitter-api-php": "^1.0",
         "webflo/drupal-finder": "^1.2.1"
     },
     "conflict": {

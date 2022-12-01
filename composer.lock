@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "056f084cae4786e4574e5f4acef112f8",
+    "content-hash": "a72ed234818e583235e04d7df491af5f",
     "packages": [
         {
             "name": "composer/installers",
@@ -461,15 +461,6 @@
                 "source": "https://github.com/consolidation/output-formatters/tree/3.5.1"
             },
             "time": "2020-10-11T04:15:32+00:00"
-        },
-        {
-            "name": "cure53/dompurify",
-            "version": "2.4.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/cure53/DOMPurify/archive/refs/tags/2.4.1.zip"
-            },
-            "type": "drupal-library"
         },
         {
             "name": "cweagans/composer-patches",
@@ -5465,6 +5456,15 @@
                 }
             ],
             "time": "2022-08-02T15:47:23+00:00"
+        },
+        {
+            "name": "twitter/twitter-api-php",
+            "version": "1.0.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/J7mbo/twitter-api-php/archive/refs/tags/1.0.6.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "webflo/drupal-finder",
