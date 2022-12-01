@@ -1,7 +1,7 @@
 /* 1300 Styles */
 // QUERY SPECIFIC VARIABLES
 // --------------------------------
-// declare the number of columns each sidebar will take up (720 both should be same if stacked) 
+// declare the number of columns each sidebar will take up (720 both should be same if stacked)
 @first_sidebar_columns: 3;
 @second_sidebar_columns: 5;
 // replace width with percentage declaration for fluid layout within this query range
@@ -15,14 +15,14 @@
 #sidebar-first { .column(@first_sidebar_columns); }
 #sidebar-second { .column(@second_sidebar_columns); }
 .footer-region-one { .column(5); }
-.footer-region-two { .column(5); } 
+.footer-region-two { .column(5); }
 .footer-region-three { .column(5); }
 //#block-menu-menu-footer-menu li { width: 30%; }
 
-// LAYOUT 
+// LAYOUT
 // --------------------------------
 #page, #footer-inner, #footer-lower, #content-bottom .block, .inner {
-	margin: 0 auto; 
+	margin: 0 auto;
 	width: @full_width; }
 #sidebar-first {
   float: left; }
@@ -34,7 +34,7 @@
 .two-sidebars #inner,
 .sidebar-second #inner {
   margin-right: @second_sidebar_width + @gutter-width; }
-// FRONT PAGE LAYOUT  
+// FRONT PAGE LAYOUT
 .front #sidebar-first, .front #sidebar-second {
   float: right; }
 .front.two-sidebars #inner {
@@ -44,6 +44,6 @@
   margin-right: @first_sidebar_width + @gutter-width; }
 .front.sidebar-second #inner {
   margin-right: @second_sidebar_width + @gutter-width; }
- 
-/* Navigation */ 
+
+/* Navigation */
 #navigation .content a { .font-size(18);  padding: 9px 29px; }

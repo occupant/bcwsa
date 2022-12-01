@@ -6,15 +6,15 @@
 @import 'type.less';
 @import 'components.less';
 //////////
-// GRID //  
+// GRID //
 //////////
 
 // Specify the number of columns, set column and gutter widths
 // 1=80, 4=320, 6=480, 9=720, 12=960px, 14=1120px, 15=1200px
 // Mobile Layout
-@columns: 30; 
+@columns: 30;
 @column-width: .5em;
-@gutter-width: 2em; 
+@gutter-width: 2em;
 
 //30 columns x 40px (10width+30gutter) =1200px
 //1200px / 16 (base em size) = 75em
@@ -24,11 +24,11 @@
 
 // Remove the definition below for a pixel-based layout
 // @total-width: 100%;
-  
+
 /*base styles */
 @import '320.less';
 
-@media only screen and (min-width : 31em) { 
+@media only screen and (min-width : 31em) {
 @import '480.less'; }
 
 @media only screen and (min-width : 48em) {
@@ -38,5 +38,5 @@
 @import '1000.less'; }
 
 /*styles for 1200px and up*/
-//@media only screen and (min-width : 1300px) { 
-//@import '1300.less'; } 
+//@media only screen and (min-width : 1300px) {
+//@import '1300.less'; }
