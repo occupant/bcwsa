@@ -3557,7 +3557,7 @@ article.node-teaser .content:after {
         margin-right: 0;
         float: none;
         order: 1;
-        width: 10.5em;
+        width: 164px;
     }
 
     .two-sidebars #sidebar-second {
@@ -3566,7 +3566,7 @@ article.node-teaser .content:after {
         display: block;
         order: 3;
         margin-left: 0;
-        width: 13em;
+        width: 200px;
     }
 
     .two-sidebars #inner {
