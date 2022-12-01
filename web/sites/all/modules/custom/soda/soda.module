@@ -1,0 +1,56 @@
+<?php
+
+function themer_helper_id_safe($string) {
+  // Replace with dashes anything that isn't A-Z, numbers, dashes, or underscores.
+  $string = strtolower(preg_replace('/[^a-zA-Z0-9_-]+/', '-', $string));
+  // If the first character is not a-z, add 'n' in front.
+  if (!ctype_lower($string{0})) { // Don't use ctype_alpha since its locale aware.
+    $string = 'id'. $string;
+  }
+  return $string;
+}
+
+// Preprocess variables for html.tpl.php -- adds classes to body tag for themeing.
+function themer_helper_preprocess_html(&$variables, $hook) {
+  // Classes for body element. Allows advanced theming based on context
+  // (home page, node of certain type, etc.)
+  if (!$variables['is_front']) {
+    // Add unique class for each page.
+    $path = drupal_get_path_alias($_GET['q']);
+    // Add unique class for each website section.
+    list($section, ) = explode('/', $path, 2);
+    if (arg(0) == 'node') {
+      if (arg(1) == 'add') {
+        $section = 'node-add';
+      }
+      elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
+        $section = 'node-' . arg(2);
+      }
+    }
+    $variables['classes_array'][] = drupal_html_class('section-' . themer_helper_id_safe($section));
+    $variables['classes_array'][] = drupal_html_class('path-' . themer_helper_id_safe($path));
+  } 
+}
+
+// Preprocess variables for page.tpl.php -- adds template suggestions based on content type
+function themer_helper_preprocess_page(&$variables, $hook) { 
+ // Add template suggestions based on content type 
+	if (isset($variables['node'])) {  
+    $variables['theme_hook_suggestions'][] = 'page__type__'. $variables['node']->type;
+		$variables['theme_hook_suggestions'][] = "page__node__" . $variables['node']->nid; 
+  }
+}
+
+// Preprocess variables for node.tpl.php - stripe and add 'Unpublished' div.
+function themer_helper_preprocess_node(&$variables, $hook) {
+  // Add a striping class. 
+  $variables['classes_array'][] = 'node-' . $variables['zebra'];
+}
+
+// Preprocess variables for block.tpl.php - stripe blocks.
+function themer_helper_preprocess_block(&$variables, $hook) {
+  // Add a striping class.
+  $variables['classes_array'][] = 'block-' . $variables['zebra'];
+}
+
+?>

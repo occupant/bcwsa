@@ -1,0 +1,49 @@
+/* 1300 Styles */
+// QUERY SPECIFIC VARIABLES
+// --------------------------------
+// declare the number of columns each sidebar will take up (720 both should be same if stacked) 
+@first_sidebar_columns: 3;
+@second_sidebar_columns: 5;
+// replace width with percentage declaration for fluid layout within this query range
+@full_width: 1200px;
+@first_sidebar_width: (@column-width + @gutter-width)*@first_sidebar_columns;
+@second_sidebar_width: (@column-width + @gutter-width)*@second_sidebar_columns;
+
+// 1200px = 15 columns (we're using 1200px even though we're declaring 1300px breakpoint - 15 columns is nicer to work with than 16)
+// --------------------------------
+.banner  { .column(15); }
+#sidebar-first { .column(@first_sidebar_columns); }
+#sidebar-second { .column(@second_sidebar_columns); }
+.footer-region-one { .column(5); }
+.footer-region-two { .column(5); } 
+.footer-region-three { .column(5); }
+//#block-menu-menu-footer-menu li { width: 30%; }
+
+// LAYOUT 
+// --------------------------------
+#page, #footer-inner, #footer-lower, #content-bottom .block, .inner {
+	margin: 0 auto; 
+	width: @full_width; }
+#sidebar-first {
+  float: left; }
+#sidebar-second {
+  float: right; }
+.two-sidebars #inner,
+.sidebar-first #inner {
+  margin-left: @first_sidebar_width; }
+.two-sidebars #inner,
+.sidebar-second #inner {
+  margin-right: @second_sidebar_width + @gutter-width; }
+// FRONT PAGE LAYOUT  
+.front #sidebar-first, .front #sidebar-second {
+  float: right; }
+.front.two-sidebars #inner {
+  margin-right: @first_sidebar_width + @second_sidebar_width + @gutter-width;
+  margin-left: 0; }
+.front.sidebar-first #inner {
+  margin-right: @first_sidebar_width + @gutter-width; }
+.front.sidebar-second #inner {
+  margin-right: @second_sidebar_width + @gutter-width; }
+ 
+/* Navigation */ 
+#navigation .content a { .font-size(18);  padding: 9px 29px; }

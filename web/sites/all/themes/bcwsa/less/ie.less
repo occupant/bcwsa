@@ -1,0 +1,16 @@
+@import 'grid.less';
+@import 'variables.less';
+@import 'mixins.less';
+@import 'base.less';
+
+// respecify grid for compiling IE css
+@columns: 30; 
+@column-width: 10;
+@gutter-width: 30; 
+
+.notcolumn { margin: 0 !important; width: auto !important; }
+ 
+// import all styles (excluding base styles) up to the display size you want to serve
+@import '480.less';
+@import '740.less';
+@import '1000.less'; 

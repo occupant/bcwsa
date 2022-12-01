@@ -1,0 +1,115 @@
+// BASE STYLES
+body, select, input, textarea { color:#444; }
+// override so I can declare later
+h1,h2,h3,h4,h5,h6 { font-weight: normal;}
+a:hover, a:active { outline: none; }
+ul { margin-left:30px; }
+ol { margin-left:30px; list-style-type: decimal; }
+strong, th { font-weight: bold; }
+td, td img { vertical-align:top; } 
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+pre { padding: 15px; white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+::-moz-selection{ background: @darkblue; color:#fff; text-shadow: none; }
+::selection { background:@darkblue; color:#fff; text-shadow: none; } 
+a:link { -webkit-tap-highlight-color: #cdcdcd; } 
+html { overflow-y: scroll; }
+button {  width: auto; overflow: visible; }
+.ir { display:block; text-indent:-200%; overflow:hidden; background-repeat: no-repeat; }
+.invisible { visibility: hidden; }
+.floatleft, .floatl { float: left; margin: 0 10px 5px 0; }
+.floatright, .floatr { float: right; margin: 0 0 5px 10px; }
+.visuallyhidden, .skip a:link, .skip a:hover, .skip a:visited, .element-invisible {
+  position: absolute; left: -400%; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.skip a:active, .skip a:focus { position: static; width: auto; height: auto; }
+// Don't let styles overwrite contextual links in Drupal
+ul.contextual-links li a, div.contextual-links-wrapper a { color: #333 !important; font: 1em/1em 'Helvetica Neue', Arial, sans-serif !important; padding: 0 2px !important; }
+ul.contextual-links li a:hover { background-color: #bfdcee !important; color: #333 !important; }
+.clearfix{ *zoom:1; }
+.clearfix:before, .clearfix:after { content:""; display:table; }
+.clearfix:after { clear:both; }
+
+.clear-both { clear:both; }
+
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+// UTILITY CLASSES
+// ---------------
+
+// Quick floats
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+// Toggling content
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+// Visibility
+.invisible {
+  visibility: hidden;
+}
+//
+// Responsive: Utility classes
+// --------------------------------------------------
+
+
+// Hide from screenreaders and browsers
+// Credit: HTML5 Boilerplate
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+// Visibility utilities
+// Phones only
+
+// Hide everything else
+/*@media only screen and (max-width: 750px) {
+.hidden-desktop    {  }
+.visible-desktop   { display: none !important; }
+// Show
+.visible-phone     {  } // Use inherit to restore previous behavior
+// Hide
+.hidden-phone      { display: none !important; }
+}
+
+// Tablets & small desktops only
+@media only screen and (min-width: 760px) and (max-width: 1099px) {
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important ; }
+  // Show
+  .visible-tablet    { display: inherit !important; }
+  // Hide
+  .hidden-tablet     { display: none !important; }
+}
+
+// For desktops
+@media only screen and (min-width: 1100px) {
+.visible-phone     { display: none !important; }
+.visible-tablet    { display: none !important; }
+.hidden-phone      { display: inherit !important; }
+.hidden-tablet     { display: inherit !important; }
+.hidden-desktop    { display: none !important; }
+.visible-desktop   { display: inherit !important; }
+}*/
+
+// FIX FOR FONT WEIGHT / FLEXSLIDER in WEBKIT
+html{ -webkit-font-smoothing: antialiased; }
+// Prevent font scaling in Landscape orientation on iOS
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+  html { -webkit-text-size-adjust: 100%; }
+}

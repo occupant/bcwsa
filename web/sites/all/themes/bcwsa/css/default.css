@@ -1,0 +1,172 @@
+
+/* @group RESET */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, 
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent; }                  
+article, aside, figure, footer, header, 
+hgroup, nav, section { display:block; }
+ul { list-style:none; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+input, select { vertical-align:middle; }
+/* @end */
+/* @group BASE & FIXES */
+/* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */ 
+body, select, input, textarea { color:#444; }
+h1,h2,h3,h4,h5,h6 { font-weight: bold;}
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color: #488ec2; }
+a:hover { color: #c40015; }
+ul { margin-left:30px; }
+ol { margin-left:30px; list-style-type: decimal; }
+small { font-size:85%; }
+strong, th { font-weight: bold; }
+td, td img { vertical-align:top; } 
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+pre { 
+  padding: 15px; 
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */ }
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+/* These selection declarations have to be separate. */
+::-moz-selection{ background: #cdcdcd; color:#fff; text-shadow: none; }
+::selection { background:#cdcdcd; color:#fff; text-shadow: none; } 
+/*  j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #cdcdcd; } 
+/* always force a scrollbar in non-IE */
+html { overflow-y: scroll; }
+/* make buttons play nice in IE:    
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+/* @end */
+
+/* @group HELPERS */
+/* for image replacement */
+.ir { display:block; text-indent:-999em; overflow:hidden; background-repeat: no-repeat; }
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display:none; visibility:hidden; } 
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+/* >> The Magnificent CLEARFIX << */
+.clearfix:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; overflow: hidden; }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; } /* Hides from IE-mac \*/
+.clearfix { display: block; }
+/* clear classes */
+.clearleft, .clearl { clear: left; }
+.clearright, .clearr { clear: right; }
+.clear, .clearboth { clear: both; }
+/* Float classes */
+.floatleft, .floatl { float: left; margin: 0 10px 5px 0; }
+.floatright, .floatr { float: right; margin: 0 0 5px 10px; }
+/* Skip Links */
+.visuallyhidden, #skip a:link, #skip a:hover, #skip a:visited {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+#skip a:active, #skip a:focus {
+  position: static;
+  width: auto;
+  height: auto; }
+/* @end */
+/* bug fix with views 2 edit links. */
+div.view div.views-admin-links {
+  width: auto; }
+/* Rollover edit links for blocks. */
+div.block {
+  position: relative; }
+div.block .edit {
+  display: none;
+  position: absolute;
+  right: -20px;
+  top: -5px;
+  z-index: 40;
+  padding: 3px 8px 0;
+  font-size: 10px;
+  line-height: 16px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  /*let's get fancy! */
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-box-shadow: 0 1px 3px #888888;
+  -webkit-box-shadow: -1px 1px 2px #666666; }
+div.block .edit a {
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0; }
+div.block:hover .edit {
+  display: block; }
+#admin-menu {
+  font-size: 11px !important; }
+/* Wireframe styles. */
+.with-wireframes header,
+.with-wireframes footer,
+.with-wireframes #content-top,
+.with-wireframes #content-header,
+.with-wireframes #content-area,
+.with-wireframes #content-bottom,
+.with-wireframes #primary,
+.with-wireframes #secondary,
+.with-wireframes #sidebar-left-inner,
+.with-wireframes #sidebar-right-inner,
+.with-wireframes .block {
+  padding: 2px;
+  border: 1px solid #bbbbbb; }
+.with-wireframes .node {
+  border-bottom: 1px solid #bbbbbb;
+  margin-bottom: 10px; }
+.with-wireframes .block {
+  margin-bottom: 3px; }
+.with-wireframes #content-top,
+.with-wireframes #content-header,
+.with-wireframes #content-area,
+.with-wireframes #content-bottom {
+  margin: 0 3px 3px; }
+.with-wireframes #footer {
+  margin-top: 3px;
+  padding: 2px;
+  border: 1px solid #cccccc; }
+.with-wireframes.with-navigation #content,
+.with-wireframes.with-navigation .sidebar {
+  margin-top: 50px; }
+.with-wireframes #navigation {
+  height: 50px; }

@@ -1,0 +1,61 @@
+; Theme Info -----------------------------------------------------------------
+; required information about the theme
+
+name = British Columbia Wheelchair Sports Association
+description = British Columbia Wheelchair Sports Association is a custom theme for Drupal 7 built by Soda.
+core = 7.x
+engine = phptemplate
+
+; Regions --------------------------------------------------------------------
+; these are the stock regions
+regions[tools] = Tools Area (Page Top)
+regions[search] = Search Area
+regions[navigation] = Navigation
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[content_below] = Content : Below
+regions[content_bottom] = Content : Bottom
+regions[content_tertiary] = Content : Tertiary
+regions[content_quaternary] = Content : Quaternary
+;regions[footer_first] = Footer: First
+;regions[footer_second] = Footer: Second
+;regions[footer_third] = Footer: Third
+;regions[footer_fourth] = Footer: Span 3
+regions[footer_search] = Footer: Search
+
+; Stylesheets  ---------------------------------------------------------------
+stylesheets[screen][] = css/style.css
+stylesheets[print][] = css/print.css
+
+; (for scripts look in template.php)
+; scripts[] = scripts/scripts.js
+
+; Options --------------------------------------------------------------------
+; these are the checkboxes that are available on the theme settings page.
+
+; these are the stock options
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; additional theme settings
+settings[breadcrumb_display]   = yes
+settings[breadcrumb_separator] = ' » '
+settings[breadcrumb_home]      = 1
+settings[breadcrumb_trailing]  = 0
+settings[breadcrumb_title]     = 0
+
+version = "7.x-1.2"
+core = "7.x"
+project = "bcwsa"
+datestamp = "1317405700"
+

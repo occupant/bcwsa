@@ -1,0 +1,254 @@
+/* 740 Styles  */
+// QUERY SPECIFIC VARIABLES
+// --------------------------------
+// declare the number of columns each sidebar will take up (720 both should be same if stacked) 
+@first_sidebar_columns: 6;
+@second_sidebar_columns: 6;
+// replace width with percentage declaration for fluid layout within this query range
+@full_width: 46.25em;
+@first_sidebar_width: (@column-width + @gutter-width)*@first_sidebar_columns;
+@second_sidebar_width: (@column-width + @gutter-width)*@second_sidebar_columns;
+
+
+.hidden-phone      { display: inherit !important; }
+
+// 720px = 18 columns
+// --------------------------------
+// to offset colums use - .push(1); or .pull(1);
+// to set columns use - .column(1);
+// nested columns via delaring .column(2); / .row(2); / column(1,2);
+#content { width: 100%; margin: 0; }
+//#site-name  { .column(18); }
+#sidebar-first { .column(@first_sidebar_columns); }
+#sidebar-second { .column(@second_sidebar_columns); }
+#footer-inner, 
+.inner { .clearfix; }
+/*.footer-region-one, 
+.footer-region-two,
+.footer-region-three { .column(6); }*/
+.footer-region-one, 
+.footer-region-two,
+.footer-region-three { 
+  width: 27.8%;
+  //margin-left: 5%;
+  float: left; }
+.footer-region-two {
+  margin: 0 4% 2em 4%;
+  padding: 0 4%;
+}
+//.footer-region-one { margin-left: 0; }
+.footer-region-four { clear: left; }
+#footer-lower {
+  .copyright { 
+    width: 80%;
+    float: left; }
+	.social { 
+	  float: right; 
+	  margin: 0; }
+}
+
+//.footer-region-two { .push(1); } 
+.block-webform fieldset { .column(8);   } 
+.block-webform form { .clearfix; }
+
+
+/* @group LAYOUT */
+#page, 
+#footer-inner, 
+#footer-lower, 
+#content-below .block, 
+#content-bottom .block, 
+//#content-quaternary .flex-viewport,
+.inner {
+	margin: 0 auto; 
+	width: @full_width; }
+#center {
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  padding: 0; }
+#sidebar-first, #sidebar-second { float: right; }
+.two-sidebars #inner,
+.sidebar-first #inner { margin-right: @first_sidebar_width + @gutter-width; }
+.two-sidebars #inner,
+.sidebar-second #inner { margin-right: @second_sidebar_width + @gutter-width; }
+#sidebar-first { margin-left: @full_width - @second_sidebar_width; }
+
+#content-quaternary ul.sponsors {
+  li { 
+    float: left;
+    &.bc { width: 55%; }
+    &.canada,
+    &.bcwbs,
+    &.ssdf,
+    &.nss,
+    &.spinal {
+      width: 25%;
+      float: left;
+    }
+    &.cwsa,
+    &.rhi
+     {
+      width: 15%;
+      float: right;
+    }
+    &.canada {
+      width: 15%;
+    }
+  }
+}
+/* @end */
+
+/* @group HEADER */
+
+#header {
+  //background: url(../img/headers/bg_header2.jpg) no-repeat center center; 
+  //height: 6em;
+  background-color: white;
+  //-webkit-background-size: cover !important;
+  //-moz-background-size: cover !important;
+  //-o-background-size: cover !important;
+  //background-size: cover !important; 
+  .clearfix; }
+/*body.section-about-bcwsa #header { background: url(../img/headers/bg_header1.jpg) no-repeat center center; }
+body.section-news-events #header { background: url(../img/headers/bg_header3.jpg) no-repeat center center; }
+body.section-get-involved #header { background: url(../img/headers/bg_header4.jpg) no-repeat center center; }
+body.section-sports #header { background: url(../img/headers/bg_header2.jpg) no-repeat center center; }
+body.section-media #header { background: url(../img/headers/bg_header6.jpg) no-repeat center center; }
+body.section-resources #header { background: url(../img/headers/bg_header7.jpg) no-repeat center center; }
+body.section-community #header { background: url(../img/headers/bg_header8.jpg) no-repeat center center; }
+*/
+
+#header .social {
+  //position: absolute;
+  //right: 0;
+  float: right;
+  margin-top: 4em;
+  z-index: 800;
+ .font-size(12);
+  a { 
+    color: @accentgrey;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    &.donate {
+      color: @lightblue;
+      padding-left: .5em;
+      
+      &:hover {
+        color: @accentgrey;
+      }
+    }
+    &:hover { color: @lightblue; }
+    .fa-stack-1x {
+      color: @white;
+      //color: lighten(@black, 20%);
+    }
+  }
+}
+#header .utility {
+  clear: left;
+  float: none;
+  padding: 0;
+  margin-top: 0;  }
+#site-name { position: relative; }
+#logo { 
+  display: block;
+  //position: absolute;
+  //top: -1.9em; 
+  .logo {
+    display: block;
+    width:290px;
+  }
+}
+#site-name h1  { 
+  padding: .125em 0 .1em 2.25em;
+  line-height: .3em; }
+#site-name h1 a { 
+  color: @white;
+  .font-size(16); }
+.banner { 
+  background: @white;
+  position: relative;
+  //top: 1.750em; 
+  }
+
+// DONATE
+#header .inner { position: relative; }
+#donate-mobile { display: none; }
+#donate-desktop {
+  display: inline;
+  //top: .438em;
+  position: relative;
+  a { 
+    color: @lightblue;
+    font-size: 1.45em;
+    display: inline-block;
+    line-height: 2em; 
+    &:hover { color: @darkblue; }
+  }
+}
+
+/* @end */
+
+/* @group HOMEPAGE */
+.front #block-system-main, 
+#block-views-frontpage-block-1,
+.latest-tweets {
+  float: left;
+  width: 50%; }
+#block-views-frontpage-block-1,
+.latest-tweets {
+  padding-left: 5%;
+  width: 45%; }
+//.homepage-events .views-row, 
+#block-views-frontpage-block-3 .views-row {
+  float: left;
+  width: 25.4285em;
+  &:nth-child(even) {
+      margin-left: 2em;
+  }
+}
+/* @end */
+
+/* @group FOOTER */
+
+#footer-inner {
+  .region {
+    border-top: none;
+  }
+  .footer-region-four {
+    border-top: 1px solid @powderblue;
+  }
+  .footer-region-two {
+    border-left: 1px solid @powderblue;
+    border-right: 1px solid @powderblue;
+    background-position: 29px top;
+  }
+  .footer-region-three {
+    background-position: left top;
+  }
+  .text-right {
+    margin: 0;
+  }
+  h2 { 
+    margin-top: 0;
+  }
+}
+/* @end */
+
+/* @group MISC */
+
+
+/* @end */
+
+/* @group STUPID IE */
+// IE is stupid, so we wear a crappier suit 6em / 8 (four columns) = .75em
+.oldie .homepage-events .views-row, .oldie #block-views-frontpage-block-3 .views-row { padding: 0 .75em; }
+// blog and twitter
+#content-tertiary .inner  { .clearfix; }
+//#block-views-frontpage-block-4,
+//#block-block-2 { float: left; }
+//#block-views-frontpage-block-4 { width: 70%; }
+//#block-block-2  { width: 30%; }
+/* @end */

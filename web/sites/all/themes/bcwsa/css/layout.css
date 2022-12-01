@@ -1,0 +1,67 @@
+html, body {
+ height: 100%;
+ min-width: 960px; }
+hr.divide { display: none; } 
+#page {
+  width: 960px;
+  margin: 0 auto; }
+#header {  }
+
+/* Content */
+#content {
+ float: left;
+ width: 100%;
+ padding: 0;
+ margin: 40px -100% 80px 0; }
+.sidebar, #triptych .region { float: left; }
+#sidebar-second { float: right; }
+ 
+/* Layout Helpers */
+#header,
+.node { clear: both; } 
+ 
+/* Sidebars */
+.two-sidebars .center,
+.sidebar-first .center { margin-left: 300px; }
+#sidebar-first {
+ width: 300px;
+ margin: 40px -300px 70px 0; }
+.two-sidebars .center,
+.sidebar-second .center { margin-right: 240px; }
+#sidebar-second { 
+ width: 240px;
+ margin-bottom: 70px;
+ margin-top: 40px; }
+.region-sidebar-first {
+ padding: 0 40px 0 0; }
+.region-sidebar-second {
+ padding: 0 0 0 40px; }
+#sidebar-second section { 
+ margin-bottom: 40px; }
+ 
+/* Navigation */
+#navigation {
+  padding: 0;
+  width: 100%; }
+  	
+/* Triptych */
+#triptych {
+ margin-bottom: 70px; }
+.region-triptych-first {
+ width: 470px; } /* 1/2 width, no margin */
+.region-triptych-middle {
+ width: 265px; } /* 1/4 width + margin */
+.region-triptych-last {
+ width: 225px; } /* 1/4 width, no margin */
+.region-triptych-middle section {
+ margin: 0 20px; }
+
+/* Footer */
+#footer {
+ float: none;
+ clear: both; }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 569px) {
+	#footer {
+	 position: relative; }
+}

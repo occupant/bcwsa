@@ -1,0 +1,154 @@
+/* 480 Styles */
+// QUERY SPECIFIC VARIABLES
+// --------------------------------
+// replace width with percentage declaration for fluid layout within this query range
+@full_width: 30em;
+
+/* LAYOUT - 12 columns */
+#page, 
+#footer-inner, 
+#footer-lower, 
+#content-below .block, 
+#content-bottom .block, 
+//#content-quaternary .flex-viewport,
+.inner {
+    margin: 0 auto; 
+    width: @full_width; }
+//#content, 
+//#site-name, 
+#sidebar-first, 
+#sidebar-second { .column(12); }
+//.footer-region-one, 
+//.footer-region-two { .column(6); }
+//.footer-region-three { .column(12); }
+//.two-sidebars #sidebar-first, .two-sidebars #sidebar-second { .column(3); }
+
+
+.one-sidebar aside.sidebar{
+  padding-bottom: 2em;
+}
+/* Header */
+/* Navigation */
+#navigation h2 { padding: .5em 0 .4em 0; }
+/* Footer */
+
+
+
+// views forms
+div.views-exposed-widget {
+  display: inline;
+  label { display: inline; }
+}
+#edit-field-event-tid-wrapper,
+#edit-field-related-sport-tid-wrapper {
+  display: block;
+}
+
+
+// CONTENT
+.field-name-field-page-photo { 
+  display: block;
+  float: right;
+  margin: 0 0 1em 1.5em;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  img { width: 220px; }
+ }
+ 
+ /* @group HOMEPAGE */
+ 
+ // Homepage
+ // ---------------
+ .homepage-events .views-row {
+   float: left;
+   width: 14em;
+   &:nth-child(even) {
+     margin-left: 2em;
+   }
+ }
+ 
+ .blog-front {
+   .view-content { .clearfix; }
+   [class^="views-row-"], 
+   [class*=" views-row-"] {
+     float: left;
+     padding-left: 5%;
+     width: 30%;
+     &:first-child { padding-left: 0; }
+   }
+   /*.views-row-first,
+   .views-row-last {
+     width: 45%;
+     float: left;
+   }*/
+}
+ /* @end */
+
+/*.oldie .homepage-events .views-row {
+    margin: 0 .5em;
+}*/
+
+// ATHLETE PROFILES
+// Bio
+figure.bio-pic {
+  text-align: inherit;
+  float: left;
+}
+.bio {
+  margin-left: 150px;
+  &.event { 
+    margin-left: 0; 
+    ul.stats {
+      li { 
+        display: block;
+        width: auto;
+        padding-right: 0;
+      }
+    }
+  
+  }
+  ul.stats {
+    li { 
+      display: inline-block;
+      width: 48%;
+      padding-right: 2%;
+      strong { display: block; }
+    }
+  }
+}
+
+
+/* @group WEBFORMS */
+
+.form-item input,
+.form-textarea-wrapper textarea {
+  width: auto;
+  max-width: none !important;
+}
+
+/* @end */
+
+/* @group COLUMNS */
+.columns {
+  .clearfix;
+  > div { 
+    float: left;
+    margin-left: 2%;
+    &:first-child { margin-left: 0; }
+  }
+  &.columns-2 > div {
+    width: 49%;
+  }
+  &.columns-3 > div {
+    width: 32%;
+  }
+  &.columns-4 > div {
+    width: 23.5%;
+  }
+}
+
+/* @end */

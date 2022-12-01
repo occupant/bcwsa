@@ -1,0 +1,120 @@
+
+
+// Colours
+@darkblue: #0060a2;
+@lightblue: #20beed;
+@bcwsagrey: #ccc;
+@bcwsalightgrey: #ececec;
+@lightestgrey: #f1f1f0;
+@accentgrey: #dbdbdb;
+@powderblue: #a6e5f8;
+@altblue: #1398cf;
+@basecol : rgb(123,172,200);	    // Base colour
+@compcol : spin(@basecol, 180);  	// Complementary colour
+
+// Links
+
+@linkcol : @lightblue;
+@linkcolhover : @bcwsagrey;
+@linkcolvisited : @linkcol;
+@linkcolfocus : @linkcolhover;
+
+// greyscale
+
+@black : rgb(0,0,0);
+@darkgrey : lighten(@black, 25%);
+@grey : lighten(@black, 50%);
+@grayLight:             #999;
+@grayLighter:           #eee;
+@lightgrey : lighten(@black, 75%);
+@lightergrey : lighten(@black, 90%);
+@white : rgb(255,255,255);
+
+
+// greyscale - improved
+@black95 : lighten(@black, 5%);
+@black90 : lighten(@black, 10%);
+@black85 : lighten(@black, 15%);
+@black80 : lighten(@black, 20%);
+@black75 : lighten(@black, 25%);
+@black70 : lighten(@black, 30%);
+@black65 : lighten(@black, 35%);
+@black60 : lighten(@black, 40%);
+@black55 : lighten(@black, 45%);
+@black50 : lighten(@black, 50%);
+@black45 : lighten(@black, 55%);
+@black40 : lighten(@black, 60%);
+@black35 : lighten(@black, 65%);
+@black30 : lighten(@black, 70%);
+@black25 : lighten(@black, 75%);
+@black20 : lighten(@black, 80%);
+@black15 : lighten(@black, 85%);
+@black10 : lighten(@black, 90%);
+@black5 : lighten(@black, 95%);
+
+.black(@percentage) {
+@change: lighten(@black, @percentage);
+color: ~"@{change}";  } 
+.blackbg(@percentage) {
+@change: lighten(@black, @percentage);
+background-color: ~"@{change}";  } 
+
+// colour palettes
+
+@col_l1 : lighten(@basecol, 5%);
+@col_l2 : lighten(@basecol, 10%);
+@col_l3 : lighten(@basecol, 15%);
+@col_l4 : lighten(@basecol, 20%);
+
+@col_d1 : darken(@basecol, 5%);
+@col_d2 : darken(@basecol, 10%);
+@col_d3 : darken(@basecol, 15%);
+@col_d4 : darken(@basecol, 20%);
+
+@comp_l1 : lighten(@compcol, 5%);
+@comp_l2 : lighten(@compcol, 10%);
+@comp_l3 : lighten(@compcol, 15%);
+@comp_l4 : lighten(@compcol, 20%);
+
+@comp_d1 : darken(@compcol, 5%);
+@comp_d2 : darken(@compcol, 10%);
+@comp_d3 : darken(@compcol, 15%);
+@comp_d4 : darken(@compcol, 20%);
+
+// type - rems with px fallback, or ems with no fallback
+// REMs - http://snook.ca/archives/html_and_css/font-size-with-rem
+/*.font-size(@font-size: 16){
+@rem: (@font-size / 10);
+font-size: @font-size * 1px;
+font-size: ~"@{rem}rem"; }*/
+
+.font-size(@font-size){
+@em: (@font-size / 16); 
+// 16px is our base size - divide target size by 16 for a declaration of ems - but remember, unlike rems, they cascade 
+font-size: ~"@{em}em"; }
+
+/*.sans-serif {
+font-family : "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.serif {
+font-family : "Cambria", Georgia, Times, Times New Roman; }
+
+.monospace {
+font-family : "Monaco", Courier New, monospace; }*/
+
+// layout
+
+@baseline : 1.5em;
+
+
+// Z-index master list - from boostrap
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindexDropdown:          1000;
+@zindexPopover:           1010;
+@zindexTooltip:           1020;
+@zindexFixedNavbar:       1030;
+@zindexModalBackdrop:     1040;
+@zindexModal:             1050;
+

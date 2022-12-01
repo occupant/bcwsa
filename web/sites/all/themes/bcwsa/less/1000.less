@@ -1,0 +1,332 @@
+/* 1000 Styles */
+// QUERY SPECIFIC VARIABLES
+// --------------------------------
+// declare the number of columns each sidebar will take up (720 both should be same if stacked) 
+@first_sidebar_columns: 5;
+@second_sidebar_columns: 6;
+@home_first_sidebar_columns: 7;
+@home_second_sidebar_columns: 7;
+// replace width with percentage declaration for fluid layout within this query range
+@full_width: 62.5em;
+@first_sidebar_width: (@column-width + @gutter-width)*@first_sidebar_columns;
+@second_sidebar_width: (@column-width + @gutter-width)*@second_sidebar_columns;
+@home_first_sidebar_width: (@column-width + @gutter-width)*@home_first_sidebar_columns;
+@home_second_sidebar_width: (@column-width + @gutter-width)*@home_second_sidebar_columns;
+
+// 1000px = 25 columns
+// --------------------------------
+//#site-name  { .column(25); }
+#sidebar-first { .column(@first_sidebar_columns); margin-left: 0; }
+#sidebar-second { .column(@second_sidebar_columns); margin-right: 0; }
+.front #sidebar-first { .column(@home_first_sidebar_columns); }
+.front #sidebar-second { .column(@home_second_sidebar_columns); }
+/*.footer-region-one { .column(8); }
+.footer-region-two { .column(9); } 
+.footer-region-three { .column(8); }*/
+
+//.front #sidebar-first, .front #sidebar-second { .column(8); }
+
+
+/* @group LAYOUT */
+
+#page, 
+#footer-inner, 
+#footer-lower, 
+#content-bottom .block, 
+#content-below .block, 
+//#content-quaternary .flex-viewport,
+.inner {
+	margin: 0 auto; 
+	width: @full_width; }
+#sidebar-first {
+  float: left; }
+#sidebar-second {
+  float: right; }
+.two-sidebars #inner,
+.sidebar-first #inner {
+  margin-left: @first_sidebar_width;
+  margin-right: 0; }
+.two-sidebars #inner,
+.sidebar-second #inner {
+  //margin-right: @second_sidebar_width + @gutter-width/2; 
+  //margin-left: @first_sidebar_width + @gutter-width/2;}
+  margin-right: @second_sidebar_width;
+  margin-left: @first_sidebar_width}
+// FRONT PAGE LAYOUT  
+.front #sidebar-first, .front #sidebar-second {
+  float: right; }
+.front.two-sidebars #inner {
+  margin-right: @home_first_sidebar_width + @home_second_sidebar_width + @gutter-width;
+  margin-left: 0; }
+.front.sidebar-first #inner {
+  margin-right: @home_first_sidebar_width + @gutter-width; }
+.front.sidebar-second #inner {
+  margin-right: @home_second_sidebar_width + @gutter-width; }
+// Fix IE 7/8
+/*.oldie .sidebar-first #inner { //width: 760px; margin-left: @first_sidebar_width !important; 
+padding-left: 240px; }
+.oldie .two-sidebars #inner { width: 520px; padding-left: 240px; }
+.oldie .sidebar-second #inner { width: 760px; }
+.oldie .front.two-sidebars #inner { width: 410px; }
+.oldie .front.sidebar-first #inner { width: 760px;  }
+.oldie .front.sidebar-second #inner { width: 760px; }*/
+
+#content-quaternary ul.sponsors li {
+  &.bcwbs { text-align: left; width: 20%;  }
+  &.spinal { text-align: right;  width: 20%;  }
+  &.ssdf,
+  &.nss
+   {
+    width: 30%;
+  }
+  &.canada, 
+  &.rhi,
+  &.cwsa { text-align: left;   }
+}
+
+/* @end */
+
+/* @group NAVIGATION */
+
+/* MAIN NAV */
+#navigation {
+ 	
+ 	height: 3.5em;
+ 	h2 {
+		.visuallyhidden;
+ 	}
+ 	.content {
+		display: block !important;
+		ul {
+		  padding-top: 1em;
+		}
+		a {
+		  .font-size(20);
+		  color: @white;
+		  display: inline-block;
+		  padding: .6em 1.5em .6em;
+		  text-align: center;
+		  text-shadow:  none;
+		  &:hover, &.active-hover { 
+		    //background-color: lighten(@darkblue, 5%); 
+		    //background-color: rgba(32,190,237,.5);
+		    color: @white; 
+		  }
+		  &.active-trail, &.active { 
+		      color: @lightblue; 
+		      //text-shadow:  1px 1px 2px rgba(0,0,0,.75);
+		    }
+ 		}
+ 		> ul > li > a.active-trail,
+ 		> ul > li > a.active {
+ 		  //background-color: @lightblue;
+ 		  background-color: rgba(32,190,237,.5);
+ 		  color: white;
+ 		}
+ 		ul li {
+			float: left;
+			width: auto !important;
+			&:hover {
+				background: transparent;
+			}
+ 		}
+	}
+}
+
+
+/* SUBNAV */
+#navigation .content ul ul { 
+	display: none;
+	}
+#navigation .content ul li:hover ul { 
+	background-color: @lightblue;
+	display: block;
+	position: absolute;
+	width: 10em;
+	z-index: 100;
+	left: 0;
+	padding: 0; }
+.ie7 #navigation .content ul li:hover ul { top: 32px; }
+#navigation .content ul ul li { 
+	background-color: #fff;
+	margin: 0 1px 1px 1px;
+	float: none;
+	width: 10em;
+	text-align: left;
+	display: block;
+	a {
+	  display: block;
+		text-shadow: none ;
+		text-transform: none;
+		.font-size(13);
+		line-height: 1em;
+		color: @black75;
+		font-family: 'Helvetica Neue', Arial, sans-serif;
+		text-align: left;
+		padding: .5em; 
+		&.active {
+			font-weight:bold; 
+			text-shadow: none;
+  	}
+  	&:hover { color: @black; background-color: lighten(@powderblue, 10%); }
+	}
+	&.first a { 
+	  border-top: 16px solid @darkblue; 
+	  //border-top: 16px solid @lightblue; 
+	  position: relative;
+	  &:after { 
+	    position: absolute;
+	    content: '';
+	    width: 16px;
+	    height: 7px;
+	    top: -1em;
+	    left: 2.308em;
+	    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHCAYAAAABIM1CAAAAxElEQVQYV2NkwAH+//8vDZSaDMTMQJzFyMj4FJtSRmyCQM2ZQPF2IOaHyn8B0mVAPAto0F9kPSgGADWqAyXnALENDocdAYqnAw25BpMHGwDUyAakKoC4GohBbBj4DmSAbORBEvsFZHcAcSvQoF+MQM0g22YCsRaarftAtkHFpgFpVzT5m0B+CsiANCCjF8mWd0B2MdD0BcgagOpigfwJQCwEFQeFSyXMC6AQB/kdpLkAqPk1mm1gLtAQkGZQzIBoUFg8AgANuDiq0IV7LAAAAABJRU5ErkJggg==) no-repeat left top;
+	    }
+	 }
+}
+#navigation .content ul li.active-trail ul li.first a { border-top: 16px solid @lightblue; }
+#navigation .content ul li ul { padding-bottom: 6px; }
+#navigation .content ul li:hover ul ul  { display: none; }
+/* @end */
+
+/* @group FOOTER */
+#footer {
+	#block-search-form {
+	  //margin-top: 1.688em;
+	  text-align: left;
+	  float: right;
+	  background-color: @lightblue;
+	  padding: 0;
+	  h2 { 
+	    display: block;
+	    .font-size(18); 
+	    padding-bottom: 0;
+	  }
+	}
+}
+
+#footer-inner {
+  .footer-region-two { background-position: 40px top; }
+  .address { float: left; }
+}
+/* @end */
+
+/* @group HOMEPAGE */
+// HOMEPAGE
+// ------------------
+.oldie .homepage-events .views-row, 
+.oldie #block-views-frontpage-block-3 .views-row { margin-left: 2em; }
+//.homepage-events .views-row, 
+#block-views-frontpage-block-3 .views-row {
+    float: left;
+    width: 16.35725em;
+    margin-left: 2em;
+    &:first-child {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+/* @end */
+
+/* @group NEWS + EVENTS */
+.news-lead .with-image {
+  .clearfix;
+  figure { 
+    float: right;
+    padding-left: 2em; 
+  }
+  h2, .date, p { 
+    float: left;
+    width: 400px;
+  }
+}
+
+/* @end */
+
+/* @group WEBFORMS */
+.form-item {
+  margin-bottom:.5em;
+  display: block;
+  label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+  }
+  input {
+    padding: .5em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
+  }
+  
+  &.form-type-radio,
+  &.form-type-checkbox {
+    margin: .5em 0;
+    display: block;
+    vertical-align: top;
+    padding-left: 11em;
+    input, label {
+      box-sizing: border-box;
+      padding: 0;
+      vertical-align: top;
+      text-align: left;
+      width: auto;
+    }
+  }
+  &.webform-component-textarea > label {
+    width: auto;
+    text-align: left;
+  }
+}
+
+.webform-component-radios,
+.webform-component-checkboxes
+/*.webform-component-textfield*/ {
+  > label { float: left; }
+}
+
+
+
+/* @end */
+
+/* @group MISC */
+// views forms
+#edit-field-event-tid-wrapper,
+#edit-field-related-sport-tid-wrapper {
+  display: inline;
+}
+
+
+// ATHLETE PROFILES
+.profile-list {
+  .photo { 
+    padding: 0 1em 0 0; 
+    float: left; 
+    a { display: inline-block; }
+  }
+  .views-field-title {
+    position: relative;
+    float: left; 
+    height: 125px;
+    a {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      padding-right: 1em;
+    }
+  } 
+}
+// ATHLETE PROFILES
+// Bio
+.bio ul.stats li strong { display: inline; }
+
+
+/* @end */
