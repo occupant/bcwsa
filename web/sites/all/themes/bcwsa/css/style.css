@@ -3520,16 +3520,58 @@ article.node-teaser .content:after {
     }
     */
 
-    .sidebar-second #inner, 
-    .two-sidebars #inner {
+
+
+    .sidebar-first #inner {
+        margin-left: 12.5em;
+        margin-right: 0;
+    }
+
+    .sidebar-second #inner {
         margin-right: 15em;
         margin-left: 12.5em;
     }
 
-    .sidebar-first #inner, 
-    .two-sidebars #inner {
-        margin-left: 12.5em;
+
+
+    .two-sidebars #main .inner {
+        display: flex;
+        gap: 2em;
+    }
+
+    .two-sidebars #center {
+        margin-left: 0;
         margin-right: 0;
+        float: none;
+        order: 2;
+    }
+
+    .two-sidebars #inner {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .two-sidebars #sidebar-first {
+        position: relative;
+        display: block;
+        margin-right: 0;
+        float: none;
+        order: 1;
+        width: 10.5em;
+    }
+
+    .two-sidebars #sidebar-second {
+        position: relative;
+        float: none;
+        display: block;
+        order: 3;
+        margin-left: 0;
+        width: 13em;
+    }
+
+    .two-sidebars #inner {
+        margin-right: 0;
+        margin-left: 0;
     }
 
     .front #sidebar-first,
