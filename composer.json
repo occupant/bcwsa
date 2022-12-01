@@ -78,6 +78,7 @@
         "drupal/admin_menu": "^3.0@RC",
         "drupal/admin_views": "^1.8",
         "drupal/adminimal_admin_menu": "^1.9",
+        "drupal/adminimal_theme": "^1.26",
         "drupal/better_formats": "^1.0@beta",
         "drupal/block_class": "^2.4",
         "drupal/breakpoints": "^1.6",
