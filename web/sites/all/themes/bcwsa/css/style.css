@@ -3543,7 +3543,7 @@ article.node-teaser .content:after {
         margin-left: 0;
         margin-right: 0;
         float: none;
-        order: 2;
+        order: 1;
     }
 
     .two-sidebars #inner {
@@ -3556,7 +3556,7 @@ article.node-teaser .content:after {
         display: block;
         margin-right: 0;
         float: none;
-        order: 1;
+        order: 0;
         width: 17.5em;
     }
 
@@ -3564,7 +3564,7 @@ article.node-teaser .content:after {
         position: relative;
         float: none;
         display: block;
-        order: 3;
+        order: 2;
         margin-left: 0;
         width: 21em;
     }

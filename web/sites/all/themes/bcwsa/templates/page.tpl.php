@@ -66,8 +66,8 @@
  * @see template_process()
  */
 ?>
-<div class="skip"><a href="#navigation">Skip to Navigation</a></div> 
-<div class="skip"><a href="#content">Skip to Content</a></div> 
+<div class="skip"><a href="#navigation">Skip to Navigation</a></div>
+<div class="skip"><a href="#content">Skip to Content</a></div>
 
 <header id="header" role="banner">
   <div class="banner">
@@ -111,7 +111,6 @@
 
 <div id="main">
   <div class="inner clearfix">
-    <div id="donate-mobile"><a href="/donate">Donate</a></div>
     <div id="center">
       <div id="inner">
         <div id="content" class="column" role="main">
@@ -181,17 +180,17 @@
       <div class="region footer-region-one">
         <h2>Want to help?</h2>
         <p>Make a donation to BC Wheelchair Sports today.</p>
-        <p class="text-right"><a href="/donate" class="button">donate</a></p> 
+        <p class="text-right"><a href="/donate" class="button">donate</a></p>
       </div>
       <div class="region footer-region-two">
         <h2>Have you heard?</h2>
         <p>Sign up for our newsletter to stay on top of all of the latest.</p>
-        <p class="text-right"><a href="/about-bcwsa/sign-our-newsletter" class="button">sign up now</a></p> 
+        <p class="text-right"><a href="/about-bcwsa/sign-our-newsletter" class="button">sign up now</a></p>
       </div>
       <div class="region footer-region-three">
         <h2>Join today.</h2>
         <p>Renew or sign up for your membership.</p>
-        <p class="text-right"><a href="/about-bcwsa/become-member" class="button">sign up</a></p> 
+        <p class="text-right"><a href="/about-bcwsa/become-member" class="button">sign up</a></p>
       </div>
       <div class="region footer-region-four clearfix">
         <div class="address">
