@@ -3536,7 +3536,6 @@ article.node-teaser .content:after {
 
     .two-sidebars #main .inner {
         display: flex;
-        gap: 2em;
     }
 
     .two-sidebars #center {
@@ -3547,8 +3546,8 @@ article.node-teaser .content:after {
     }
 
     .two-sidebars #inner {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 2em;
+        margin-right: 2em;
     }
 
     .two-sidebars #sidebar-first {
