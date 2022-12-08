@@ -4,8 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92997bef799b4415ae50d89bee28ceb2",
+    "content-hash": "ac237c9fc2ae3a8b4750c7ce68c73eaa",
     "packages": [
+        {
+            "name": "ckeditor/ckeditor",
+            "version": "4.20.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://download.cksource.com/CKEditor/CKEditor/CKEditor%204.20.1/ckeditor_4.20.1_full.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "ckeditor"
+            }
+        },
         {
             "name": "composer/installers",
             "version": "v1.12.0",
