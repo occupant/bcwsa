@@ -121,6 +121,7 @@
         "drupal/jquery_update": "^4.0",
         "drupal/libraries": "^2.5",
         "drupal/link": "^1.11",
+        "drupal/linkit": "^3.6",
         "drupal/manualcrop": "^1.7",
         "drupal/menu_block": "^2.9",
         "drupal/menu_position": "^1.2",

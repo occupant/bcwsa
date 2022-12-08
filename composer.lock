@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac237c9fc2ae3a8b4750c7ce68c73eaa",
+    "content-hash": "5e19dbf3fb47057989a8e1ecfbf7bf02",
     "packages": [
         {
             "name": "ckeditor/ckeditor",
@@ -2924,6 +2924,56 @@
             "homepage": "https://www.drupal.org/project/link",
             "support": {
                 "source": "https://git.drupalcode.org/project/link"
+            }
+        },
+        {
+            "name": "drupal/linkit",
+            "version": "3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/linkit.git",
+                "reference": "7.x-3.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/linkit-7.x-3.6.zip",
+                "reference": "7.x-3.6",
+                "shasum": "d26562e02c2963a0dcb5ff47b9a278fb9a3602ee"
+            },
+            "require": {
+                "drupal/ctools": "*",
+                "drupal/drupal": "~7.0",
+                "drupal/entity": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "7.x-3.6",
+                    "datestamp": "1608948315",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/7/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "anon",
+                    "homepage": "https://www.drupal.org/user/464598"
+                },
+                {
+                    "name": "johnwebdev",
+                    "homepage": "https://www.drupal.org/user/3331569"
+                }
+            ],
+            "description": "Provides an easy interface for inserting links.",
+            "homepage": "https://www.drupal.org/project/linkit",
+            "support": {
+                "source": "https://git.drupalcode.org/project/linkit"
             }
         },
         {
