@@ -3568,11 +3568,6 @@ article.node-teaser .content:after {
         width: 21em;
     }
 
-    .two-sidebars #inner {
-        margin-right: 0;
-        margin-left: 0;
-    }
-
     .front #sidebar-first,
     .front #sidebar-second {
         float: right
